@@ -30,6 +30,7 @@
 nbproject
 thumbs.db
 *.iml
+package-lock.json.*
  
 # Folders to ignore
 .hg

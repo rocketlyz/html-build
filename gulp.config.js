@@ -28,7 +28,7 @@ module.exports.copy = function() {
 module.exports.replace = function () {
   const assetsMap = JSON.parse(fs.readFileSync(path.resolve(PROJECT_PATH, 'webpack-assets.json')));
 
-  const REG = new RegExp('([0-9a-z]*)-stamp4hash\.(js)', 'ig');
+  const REG = new RegExp('([0-9a-z]*)-stamp4hash\.(css|js)', 'ig');
 
   return gulp.src(path.resolve(TEMPLATE_PATH, '*.html'))
     .pipe(replace(REG, function (match, p1, p2) {

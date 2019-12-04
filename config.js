@@ -25,5 +25,5 @@ module.exports = {
   SOURCE_DIR,
   TARGET_DIR,
   TEMPLATE_DIR,
-  PUBLIC_PATH: PUBLIC_PATH || `/${name.toLowerCase()}/dist`,
+  PUBLIC_PATH: PUBLIC_PATH || path.resolve(PROJECT_PATH, TARGET_DIR),
 };

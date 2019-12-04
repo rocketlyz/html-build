@@ -7,6 +7,8 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const AssetsWebpackPlugin = require('assets-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { ENTRY, PROJECT_PATH, SOURCE_DIR, TARGET_DIR, PUBLIC_PATH } = require('./config.js');
+const buildrc = require('./buildrc');
+
 
 module.exports = {
   mode: 'production',
@@ -31,6 +33,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
+              modules: buildrc['production']['css-modules'],
               importLoaders: 1,
             },
           },
